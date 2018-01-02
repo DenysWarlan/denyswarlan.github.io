@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+}
+.header {
+  position: relative;
+}
+.header .container {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header .container .row-fluid .span12 {
+  position: relative;
+}
+.header .container .row-fluid .span12 .passek {
+  padding: 12px 0;
+  margin-bottom: 30px;
+  position: relative;
+  font-size: 15px;
+  line-height: 20px;
+  color: #888;
+}
+.header .container .row-fluid .span12 .passek:before {
+  content: '';
+  position: absolute;
+  width: 500%;
+  height: 100%;
+  top: 0;
+  left: -200%;
+  background: #242424;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span9 {
+  display: inline-block;
+  position: relative;
+  width: 700px;
+  min-height: 1px;
+  margin-left: 20px;
+  padding-top: 12px;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span9 .top-info {
+  display: inline-block;
+  margin-right: 1%;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span9 .top-info i {
+  margin-right: 10px;
+  color: white;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span9 .top-info a {
+  text-decoration: none;
+  color: #888;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span9 .top-info a:hover {
+  color: #43caca;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span3 {
+  position: relative;
+  display: inline;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span3 .span1 {
+  position: relative;
+  display: inline;
+  width: 100px;
+}
+.header .container .row-fluid .span12 .passek .row-fluid .span3 .span1 img {
+  width: 40px;
+}
