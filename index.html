@@ -218,24 +218,25 @@
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6">
-					<form action="http://formspree.io/denys.varlan95@gmail.com" class="main_form" novalidate target="_blank" method="post">
+					<form method="post" action="send.php" class="main_form" id="main_form" novalidate target="_blank" >
 						<label class="form-group">
 							<span class="color_element">*</span> Your name:
-							<input type="text" name="name" placeholder="Your name" data-validation-required-message="Вы не ввели имя" required />
+							<input type="text" name="name" placeholder="Your name" data-validation-required-message="Nie wpisałeś imienia" required />
 							<span class="help-block text-danger"></span>
 						</label>
 						<label class="form-group">
 							<span class="color_element">*</span> Your E-mail:
-							<input type="email" name="email" placeholder="Your E-mail" data-validation-required-message="Не корректно введен E-mail" required />
+							<input type="email" name="email" placeholder="Your E-mail" data-validation-required-message="E-mail nie został poprawnie wprowadzony" required />
 							<span class="help-block text-danger"></span>
 						</label>
 						<label class="form-group">
 							<span class="color_element">*</span> Your messenge:
-							<textarea name="message" placeholder="Your messange" data-validation-required-message="Вы не ввели сообщение" required></textarea>
+							<textarea name="mes" placeholder="Your messange" data-validation-required-message="Nie wprowadziłeś wiadomości" required></textarea>
 							<span class="help-block text-danger"></span>
 						</label>
-						<button>Send</button>
+						<button type="submit" name="button">Send</button>
 					</form>
+
 				</div>
 			</div>
 		</div>
