@@ -64,4 +64,30 @@ $(window).load(function() {
 	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
 	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
-}); 
+});
+
+;(function($){
+    $( document ).ready(function() {
+        $("#btn").click(
+            function(){
+                sendAjaxForm('result_form', 'ajax_form', 'action_ajax_form.php');
+                return false;
+            }
+        );
+    });
+
+    function sendAjaxForm(result_form, ajax_form, url) {
+        $.ajax({
+            url:     url,
+            type:     "POST",
+            dataType: "html",
+            data: $("#"+ajax_form).serialize(),
+            success: function() {
+                alert("Dane zostały  wyslani");
+            },
+            error: function() {
+                alert("Dane  zostały nie wyslani");
+            }
+        });
+    }
+})(jQuery);

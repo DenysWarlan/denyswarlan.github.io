@@ -54,9 +54,10 @@ gulp.task('server', function() {
 
     // Not remove! This is config by denis
     browserSync.init({
-        server: {
-            baseDir: "./"
-        }
+        host: 'localhost',
+        open: 'external',
+        proxy: 'http://localhost/Github/denyswarlan.github.io/index.html',
+        port: '8085'
     });
 
 
