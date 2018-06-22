@@ -1,3 +1,4 @@
+(function ($) {
 $(document).ready(function() {
 
 	$("#portfolio_grid").mixItUp();
@@ -66,28 +67,48 @@ $(window).load(function() {
 
 });
 
-;(function($){
-    $( document ).ready(function() {
-        $("#btn").click(
-            function(){
-                sendAjaxForm('result_form', 'ajax_form', 'action_ajax_form.php');
+
+$(document).ready(function () {
+    $(function () {
+        $('#form').on('submit', function (e) {
+            if (!e.isDefaultPrevented()) {
+                var url = "mail.php",
+                    formMes = $('#btn');
+
+                $.ajax({
+                    type: "POST",
+                    url: url,
+                    data: $(this).serialize(),
+                    beforeSend: function () {
+                        formMes.next().text('Sending your letter...');
+                    },
+                    success: function (res) {
+                        if (res == 0) {
+                            formMes.next().text('Sent letter ');
+                            formMes.next().addClass('success');
+                            $('#form')[0].reset();
+                            setTimeout(resetSpan, 5000);
+                        } else {
+                            formMes.next().text('Something was wrong.');
+                            formMes.next().addClass('error');
+                            setTimeout(resetSpan, 5000);
+                        }
+                    },
+                    error: function () {
+                        formMes.next().text('Something was wrong. Try later');
+                        formMes.next().addClass('error');
+                        setTimeout(resetSpan, 5000);
+
+                    }
+                });
                 return false;
             }
-        );
+        })
     });
+});
 
-    function sendAjaxForm(result_form, ajax_form, url) {
-        $.ajax({
-            url:     url,
-            type:     "POST",
-            dataType: "html",
-            data: $("#"+ajax_form).serialize(),
-            success: function() {
-                alert("Dane zostały  wyslani");
-            },
-            error: function() {
-                alert("Dane  zostały nie wyslani");
-            }
-        });
-    }
+function resetSpan() {
+    $('.btn-form').next().text(' ');
+}
+
 })(jQuery);

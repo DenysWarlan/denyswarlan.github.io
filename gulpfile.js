@@ -56,7 +56,7 @@ gulp.task('server', function() {
     browserSync.init({
         host: 'localhost',
         open: 'external',
-        proxy: 'http://localhost/Github/denyswarlan.github.io/index.html',
+        proxy: 'http://localhost/portfilo/denyswarlan.github.io/',
         port: '8085'
     });
 
