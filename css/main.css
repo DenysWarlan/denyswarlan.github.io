@@ -373,6 +373,18 @@ svg path {
     background-position: center;
     background-size: cover;
     height: inherit; }
+    .portfolio_item .porfolio_back_3 {
+      background-image: url(../../img/portfolio-images/3.jpg);
+      background-position: center;
+      background-size: cover;
+      height: inherit;
+    }
+    .portfolio_item .porfolio_back_4 {
+      background-image: url(../../img/portfolio-images/images.jpg);
+      background-position: center;
+      background-size: cover;
+      height: inherit;
+    }
   .portfolio_item .port_item_cont {
     position: absolute;
     top: 0;
