@@ -36,7 +36,6 @@ window.addEventListener('DOMContentLoaded', function (e) {
 
 
     startBtn.addEventListener('click', function() {
-      time = prompt('Enter date like YYYY-MM-DD', '');
       money = +prompt("Enter your income for mouth?", '');
 
       while (isNaN(money) || money == "" || money == null) {
